@@ -1,0 +1,7 @@
+Ce code définit une fonction main() utilisée dans une application web pour classer des images à l'aide de l'ensemble de données CIFAR-10.
+
+La fonction commence par afficher un titre et des instructions sur la page web. Ensuite, elle permet à l'utilisateur de télécharger un fichier image (seuls les formats JPG ou PNG sont acceptés). Si un fichier est téléchargé, il ouvre l'image, la redimensionne en 32x32 pixels et la convertit en un tableau numpy.
+
+Ensuite, il charge un modèle pré-entraîné (cifar10_model.h5) qui a été entraîné sur l'ensemble de données CIFAR-10. Le tableau d'images est passé au modèle pour prédiction, et les prédictions sont obtenues.
+
+Ensuite, la fonction crée un graphique à barres pour visualiser les probabilités de chaque étiquette de classe prédite par le modèle. Le graphique est affiché sur la page web à l'aide de st.pyplot(). Si aucune image n'est téléchargée, un message est affiché indiquant qu'aucune image n'a été téléchargée pour le moment.
